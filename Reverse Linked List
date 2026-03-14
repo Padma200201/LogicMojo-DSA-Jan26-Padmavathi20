@@ -1,0 +1,13 @@
+public static SinglyLinkedListNode reverse(SinglyLinkedListNode llist) {
+     SinglyLinkedListNode prev = null;
+    SinglyLinkedListNode current = llist;
+    
+    while (current != null) {
+        SinglyLinkedListNode next = current.next; // store next
+        current.next = prev; // reverse link
+        prev = current; // move prev
+        current = next; // move current
+    }
+    
+    return prev;
+    }
