@@ -1,10 +1,13 @@
-
+ public static SinglyLinkedListNode removeDuplicates(SinglyLinkedListNode llist) {
+   
+        
+        
     SinglyLinkedListNode current = llist;
 
     while (current != null && current.next != null) {
 
         if (current.data == current.next.data) {
-            current.next = current.next.next; // skip duplicate
+            current.next = current.next.next;
         } else {
             current = current.next; // move forward
         }
@@ -12,3 +15,5 @@
     }
 
     return llist;
+
+    }
